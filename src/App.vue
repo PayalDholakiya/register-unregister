@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Registration/>
+    <Registrations/>
   </div>
 </template>
 
+<script>
+  import Registration from './components/Registration.vue';
+  import Registrations from './components/Registrations.vue';
+export default {
+    components: {
+        Registration,
+        Registrations
+    }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,6 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
 }
 
 #nav {
